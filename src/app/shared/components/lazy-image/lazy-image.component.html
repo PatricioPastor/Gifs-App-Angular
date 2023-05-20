@@ -1,0 +1,17 @@
+<div>
+
+  <img
+  [src]="url"
+  class="card-img-top animate__animated animate__fadeIn"
+  (load)="isLoaded()"
+  [ngStyle]="{display: isLoad ? 'block' : 'none'}"
+  >
+
+  <img src="../../../../assets/lazyimage.svg"
+  class="mt-r"
+  height="250"
+  width="35"
+  *ngIf="!isLoad"
+  >
+
+</div>
